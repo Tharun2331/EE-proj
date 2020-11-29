@@ -12,7 +12,8 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./Components/Orders/Orders";
 import ContactUs from "./Components/Contact_us/Contact_us";
-
+import ReactNotifications from 'react-notifications-component';
+import Product from "./Components/Products/Product";
 
  const promise= loadStripe("pk_test_51HD4EoIwAVryXs1m20uDSxFq6l61GNrYKQeJJtxE9t8X5GGBqCmk5WXIN9aqRQjOZC6M1JpZvgBD13Tu1dhSkrIF00i1kVop36"); 
 
@@ -42,7 +43,12 @@ import ContactUs from "./Components/Contact_us/Contact_us";
   }, []);
 
   return (
+    
   <Router>
+    <div>
+      <ReactNotifications />
+      <product />
+    </div>
     <div className="App">
         <Switch>
           <Route path="/Contacts">
@@ -50,7 +56,7 @@ import ContactUs from "./Components/Contact_us/Contact_us";
           <ContactUs />
           </Route>
           <Route path="/orders">
-          
+            <Header />
             <Orders />
             </Route>
             <Route path="/login">
@@ -69,6 +75,7 @@ import ContactUs from "./Components/Contact_us/Contact_us";
            <Route path="/"> 
             <Header />
             <Home /> 
+            
            </Route>
         </Switch>  
        

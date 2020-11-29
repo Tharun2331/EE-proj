@@ -1,6 +1,11 @@
 import React from "react";
 import { useStateValue } from "../../StateProvider";
 import "./Product.css";
+import { store } from 'react-notifications-component';
+import 'react-notifications-component/dist/theme.css';
+import 'animate.css';
+
+
 
 
 function Product({ id, title, image, price, rating }) {
@@ -19,6 +24,9 @@ function Product({ id, title, image, price, rating }) {
       },
     });
   };
+
+
+
   return (
     <div className="product">
       <div className="product__info">
@@ -40,7 +48,26 @@ function Product({ id, title, image, price, rating }) {
       </div>
 
        <img src={image}  alt=""/>
-       <button onClick={addToBasket}> Add to basket </button>
+       <>
+      
+      <button
+        onClick={() => {
+          store.addNotification({
+            title: 'Added to the cart',
+            message: `${title}`,
+            type: 'success',                         // 'default', 'success', 'info', 'warning'
+            container: 'top-right',                // where to position the notifications
+            animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+            animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+            dismiss: {
+              duration: 3000
+            }
+          })
+        }}
+      >
+         <span onClick={addToBasket}> Add to basket </span>
+      </button>
+    </>
     </div>
   );
 }
