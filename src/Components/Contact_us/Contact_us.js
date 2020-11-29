@@ -22,10 +22,11 @@ export default function ContactUs() {
             <div className="container">
                 <Link to='/'>
                 <img
-                    className="contacts__logo"
+                    className="login__logo"
                     src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrs3JfYRkv89ZF4vPxELDe8K0MJBWfErfPag&usqp=CAU'
                     alt="" />
                 </Link>
+
 
             <form onSubmit={sendEmail} className="forms">
                     <div className="main">
@@ -39,7 +40,7 @@ export default function ContactUs() {
                             <input type="text" className="form-control" placeholder="Subject" name="subject"/>
                         </div>
                         <div className="sub">
-                            <textarea className="message" id="" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
+                            <textarea className="form-control" id="" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
                         </div>
                         <div className="sub">
                             <input type="submit" className="form-control" value="Send Message"></input>
