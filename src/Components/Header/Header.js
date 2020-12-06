@@ -1,16 +1,30 @@
-import React from 'react'
+import React,{useState} from 'react'
 import "./Header.css";
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../../StateProvider';
 import { auth } from '../../firebase';
-function Header() {
-  const [{basket,user}] = useStateValue();  
+
+function Header(props) {
+  const [{basket,user},dispatch] = useStateValue();  
+  
+  const [searchField, setSearchField ] = useState('');
+  // const filter = Array(this.props.title).filter(arr => 
+  //       arr.title.toLowerCase().includes(searchField.toLowerCase())
+  //   )
   const handleAuthentication= () => {
     if(user) {
       auth.signOut();
+      dispatch({
+        type: "EMPTY_BASKET",
+        basket: null,
+      });
+        
     }
+
+
+
   }
   return (
         <div className= "header">
@@ -21,8 +35,12 @@ function Header() {
           <div className="header__search"> 
             <input 
               className="header__searchInput"
-              type="text" />
-              <SearchIcon className="header__searchIcon" />
+              type="search"
+               onChange = {(e) => setSearchField({searchField: e.target.value})} 
+              />
+      
+                
+              <SearchIcon className="header__searchIcon"  />
           </div>   
 
          <div className="header__nav"> 

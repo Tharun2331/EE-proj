@@ -4,6 +4,7 @@ import "./Product.css";
 import { store } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
 import 'animate.css';
+import Header from "../Header/Header";
 
 
 
@@ -28,7 +29,9 @@ function Product({ id, title, image, price, rating }) {
 
 
   return (
+    
     <div className="product">
+        
       <div className="product__info">
         <p>{title}</p>
         <p className="product__price">
@@ -50,7 +53,7 @@ function Product({ id, title, image, price, rating }) {
        <img src={image}  alt=""/>
        <>
       
-      <button
+      <button className = "product-button1"
         onClick={() => {
           store.addNotification({
             title: 'Added to the cart',
@@ -65,7 +68,7 @@ function Product({ id, title, image, price, rating }) {
           })
         }}
       >
-         <span onClick={addToBasket}> Add to basket </span>
+         <span className="span"  onClick={addToBasket}> Add to basket </span>
       </button>
     </>
     </div>
