@@ -8,14 +8,14 @@ import Login from "./Components/Login/Login";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import Payment from "./Components/Payment/Payment";
-
+import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./Components/Orders/Orders";
 import ContactUs from "./Components/Contact_us/Contact_us";
 import ReactNotifications from 'react-notifications-component';
 
 
-//  const promise= loadStripe("pk_test_51HD4EoIwAVryXs1m20uDSxFq6l61GNrYKQeJJtxE9t8X5GGBqCmk5WXIN9aqRQjOZC6M1JpZvgBD13Tu1dhSkrIF00i1kVop36"); 
+ const promise = loadStripe("pk_test_51HD4EoIwAVryXs1m20uDSxFq6l61GNrYKQeJJtxE9t8X5GGBqCmk5WXIN9aqRQjOZC6M1JpZvgBD13Tu1dhSkrIF00i1kVop36"); 
 
  function App() {
   const [{},dispatch] = useStateValue();
@@ -66,9 +66,9 @@ import ReactNotifications from 'react-notifications-component';
             </Route>
             <Route path="/payment">
              <Header /> 
-             <Elements >
+             <Elements stripe={promise} >
               <Payment />
-            </Elements>
+            </Elements >
             </Route>
            <Route path="/"> 
             <Header />
