@@ -10,7 +10,7 @@ function Home() {
           <img
             className="home__image"
             src="https://neilpatel.com/wp-content/uploads/2015/04/ecommerce.jpg"
-            alt=""
+            alt="image"
           />
            <div className="home__row">
              <Product
@@ -18,7 +18,7 @@ function Home() {
              title = "The Lean Startup: How Constant Innovation Creates Radically Successful Businesses"
              image="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._SX325_BO1,204,203,200_.jpg" 
              rating={5}
-             price= {29.99}
+             price= {39.99}
           
              />
            <Product
@@ -26,7 +26,7 @@ function Home() {
             title = "Design Thinking para principiantes: La innovación como factor para el éxito empresarial (Spanish Edition)"
             image="https://m.media-amazon.com/images/I/5138-DfI31L.jpg" 
             rating={4}
-            price= {129.99}
+            price= {119.99}
            
            />
            <Product
@@ -34,7 +34,7 @@ function Home() {
             title = "Data Structures & Algorithms in Java 2nd Edition"
             image="https://images-na.ssl-images-amazon.com/images/I/41Z5qz-YSmL._SX378_BO1,204,203,200_.jpg" 
             rating={4}
-            price= {129.99}
+            price= {128.99}
            
            />
                
@@ -46,7 +46,7 @@ function Home() {
                 title = "Samsung Electronics Galaxy Note 20 Ultra 5G Factory Unlocked Android Cell Phone, US Version, 128GB of Storage, Mystic Bronze"
                 image="https://m.media-amazon.com/images/I/813y2+dPUOL._AC_UY327_FMwebp_QL65_.jpg" 
                 rating={5}
-                price= {899.00}
+                price= {900.00}
              />
              <Product
                 id="94833"  
@@ -80,7 +80,7 @@ function Home() {
            title = "BRONAX Men's Stylish Graffiti Personality Sneakers"
            image="https://images-na.ssl-images-amazon.com/images/I/81VI%2B7lR4DL._AC_UX575_.jpg" 
            rating={4}
-           price= {1543.09}
+           price= {1223.09}
            />
            <Product 
            id="37232" 
@@ -163,7 +163,7 @@ function Home() {
           id="78639"    
           title = "TCL 50S425 50 inch 4K Smart LED ROKU TV (2019)"
           image="https://m.media-amazon.com/images/I/71tN5cFBvFL._AC_UY327_FMwebp_QL65_.jpg" 
-          rating={5}
+          rating={4}
           price= {1500}
           />
          </div> 
