@@ -10,7 +10,8 @@ function Orders({ order }) {
     const [{ basket }] = useStateValue();
     const history = useHistory();
      const handleChange = () => {
-          history.push("/");   
+          history.push("/");  
+         console.log("done);
      }
 
     return (
