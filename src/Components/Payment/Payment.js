@@ -23,6 +23,7 @@ function Payment() {
 
     useEffect(() => {
         // generate the special stripe secret which allows us to charge a customer
+        console.log("done");
         const getClientSecret = async () => {
             const response = await axios({
                 method: 'post',
