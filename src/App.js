@@ -20,10 +20,10 @@ import ReactNotifications from 'react-notifications-component';
  function App() {
   const [{},dispatch] = useStateValue();
   useEffect(() => {
- 
+ // check user is logged in or not
 
     auth.onAuthStateChanged((authUser) => {
-      console.log("THE USER IS >>> ", authUser);
+      console.log("THE USER IS > ", authUser);
 
       if (authUser) {
         dispatch({
@@ -41,7 +41,7 @@ import ReactNotifications from 'react-notifications-component';
   },[]);
 
   return (
-    
+    // paths to different pages
   <Router>
     <div>
       <ReactNotifications />
